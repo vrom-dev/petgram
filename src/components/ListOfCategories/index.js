@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+
 import { Category } from '../Category'
 import { List, Item } from './styles'
 
@@ -33,7 +34,7 @@ export const ListOfCategories = () => {
       {
         loading
           ? <Item key='loading'><Category /></Item>
-          : categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
+          : categories.map(category => <Item key={category.id}><Category {...category} path={`/category/${category.id}`} /></Item>)
       }
     </List>
   )

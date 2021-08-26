@@ -1,16 +1,18 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 import { PhotoCard } from '../PhotoCard'
 import { useGetPhotos } from '../../hooks/useGetPhotos'
 
-export const ListOfPhotoCards = ({ categoryId }) => {
-  const { loading, error, data } = useGetPhotos(categoryId)
+export const ListOfPhotoCards = () => {
+  const { id } = useParams()
+  const { loading, error, data } = useGetPhotos(id)
 
   if (error) {
-    return <h2>Internal Server Error</h2>
+    return <p>Internal Server Error</p>
   }
   if (loading) {
-    return <h2>Loading...</h2>
+    return <p>Loading...</p>
   }
 
   return (
