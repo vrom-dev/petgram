@@ -7,7 +7,7 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 module.exports = {
   output: {
     filename: 'app.bundle.js',
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve(__dirname, 'public')
   },
   plugins: [
     new HtmlWebpackPlugin({
