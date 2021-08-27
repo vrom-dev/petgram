@@ -7,7 +7,8 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 module.exports = {
   output: {
     filename: 'app.bundle.js',
-    path: path.resolve(__dirname, 'public')
+    path: path.resolve(__dirname, 'public'),
+    publicPath: '/'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -36,7 +37,7 @@ module.exports = {
           }
         },
         {
-          urlPattern: new RegExp('https://petgram-server.vromdev.now.sh'),
+          urlPattern: new RegExp('https://petgram-api-inky.vercel.app/'),
           handler: 'NetworkFirst',
           options: {
             cacheName: 'api'
