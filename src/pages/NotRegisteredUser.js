@@ -1,13 +1,12 @@
 import React, { useContext } from 'react'
 import AuthContext from '../context/AuthContext'
 
-import { ListOfCategories } from '../components/ListOfCategories'
-
+import { Layout } from '../components/Layout'
 import { useRegisterMutation } from '../hooks/useRegisterMutation'
 import { useLoginMutation } from '../hooks/useLoginMutation'
 import { UserForm } from '../components/UserForm'
 
-export const NotRegisteredUser = () => {
+export default () => {
   const { activateAuth, removeAuth } = useContext(AuthContext)
   const { registerMutation, registerMutationLoading, registerMutationError } = useRegisterMutation()
   const { loginMutation, loginMutationLoading, loginMutationError } = useLoginMutation()
@@ -46,8 +45,9 @@ export const NotRegisteredUser = () => {
   }
 
   return (
-    <>
-      <ListOfCategories />
+    <Layout
+      title='Tu panel'
+    >
       <UserForm
         onSubmit={onRegisterSubmit}
         title='Registrarse'
@@ -60,6 +60,6 @@ export const NotRegisteredUser = () => {
         disabled={loginMutationLoading}
         error={loginError}
       />
-    </>
+    </Layout>
   )
 }

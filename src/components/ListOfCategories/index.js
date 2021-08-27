@@ -8,7 +8,7 @@ function useCategoriesData () {
   const [loading, setLoading] = useState(false)
   useEffect(async () => {
     setLoading(true)
-    const res = await window.fetch('https://petgram-api-vrom.vercel.app/categories')
+    const res = await window.fetch('http://localhost:3500/categories')
     const json = await res.json()
     setCategories(json)
     setLoading(false)

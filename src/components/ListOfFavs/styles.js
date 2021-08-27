@@ -5,11 +5,11 @@ import { Link as LinkRouter } from 'react-router-dom'
 export const Link = styled(LinkRouter)`
   border-radius: 8px;
   box-shadow:  0 0 8px rgba(0,0,0, .3);
-  display: inline-block;
+  display: block;
   margin: 1px;
   overflow: hidden;
   position: relative;
-  width: 31.33%;
+  width: 100%;
   &:after {
     content: '';
     display: block;
@@ -19,6 +19,9 @@ export const Link = styled(LinkRouter)`
 
 export const Grid = styled.div`
   padding-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
 `
 
 export const Image = styled.img`

@@ -5,7 +5,6 @@ import { useGetFavs } from '../../hooks/useGetFavs'
 
 export const ListOfFavs = () => {
   const { data, loading, error } = useGetFavs()
-
   if (error) {
     return <p>Internal Server Error</p>
   }

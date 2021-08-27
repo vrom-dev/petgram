@@ -1,6 +1,6 @@
 import { gql, useQuery } from '@apollo/client'
 
-export function useGetFavs (id) {
+export function useGetFavs () {
   const getFavs = gql`
     query getFavs {
       favs {
@@ -13,7 +13,7 @@ export function useGetFavs (id) {
       }
     }`
 
-  const { loading, error, data } = useQuery(getFavs, { fetchPolicy: 'network-only' })
+  const { loading, error, data } = useQuery(getFavs, { fetchPolicy: 'no-cache' })
 
   return { loading, error, data }
 }

@@ -4,11 +4,13 @@ const AuthContext = createContext({})
 
 export function AuthContextProvider ({ children }) {
   const [isAuth, setIsAuth] = useState(() => {
-    return window.localStorage.getItem('token')
+    const token = window.localStorage.getItem('token')
+    if (token) return token
+    else return false
   })
 
   const activateAuth = (token) => {
-    setIsAuth(true)
+    setIsAuth(token)
     window.localStorage.setItem('token', token)
   }
 

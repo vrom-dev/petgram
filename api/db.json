@@ -1,26 +1,17 @@
 {
   "users": [
     {
-      "id": "7ec3d2f0-641e-11e9-9d5d-1b8ad05606d1",
-      "password": "$2b$10$RNCVsIxNLKP8Gl.BPoedXuwGczl527UfsLDYcb.9V856ng4kxULrS",
+      "id": "db3c7600-0691-11ec-8faf-81b4b5496820",
+      "password": "$2b$10$UwHDU25VNfUZHr3sFqVlX.Hw9L2Qf7aqCzETMA8i5iNTKtBqjDInC",
       "favs": [
+        "15",
+        "7",
+        "12",
         "18",
-        "1"
+        "0"
       ],
-      "avatar": "https://gravatar.com/avatar/8e04be7dab487d77f16969fd3e0d45d4",
-      "email": "miduga@gmail.com"
-    },
-    {
-      "id": "a882e1d0-6428-11e9-9b1f-8980b7d40890",
-      "password": "$2b$10$BffxqFIacmPkKr2VZgyu7.r0nMmCMbL3nNw3CdWLpKVSKWkUAQGJS",
-      "favs": [
-        "18",
-        "16",
-        "1",
-        "15"
-      ],
-      "avatar": "https://gravatar.com/avatar/3bccd59be0a57b39bdd9b2760702795e",
-      "email": "dani@gmail.com"
+      "avatar": "https://gravatar.com/avatar/555aa6da969731004e7d6d29c021389e",
+      "email": "vic@gmail.com"
     }
   ],
   "categories": [
@@ -73,7 +64,7 @@
       "categoryId": 2,
       "src": "https://res.cloudinary.com/midudev/image/upload/w_300/q_80/v1560262103/dogs.png",
       "userId": 100,
-      "likes": 7
+      "likes": 8
     },
     {
       "id": 1,
@@ -87,14 +78,14 @@
       "categoryId": 4,
       "src": "https://images.unsplash.com/photo-1520561805070-83c413349512?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 1,
-      "likes": 1
+      "likes": 2
     },
     {
       "id": 18,
       "categoryId": 5,
       "src": "https://images.unsplash.com/photo-1518001589401-1743b61d1def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 2,
-      "likes": 15
+      "likes": 16
     },
     {
       "id": 16,
@@ -108,14 +99,14 @@
       "categoryId": 2,
       "src": "https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 1,
-      "likes": 40
+      "likes": 41
     },
     {
       "id": 12,
       "categoryId": 3,
       "src": "https://images.unsplash.com/photo-1553987882-91d92995e16c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 3,
-      "likes": 6
+      "likes": 7
     },
     {
       "id": 13,

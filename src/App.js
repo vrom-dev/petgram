@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, Suspense } from 'react'
 import {
   Route,
   Switch,
@@ -7,24 +7,28 @@ import {
 
 import AuthContext from './context/AuthContext'
 
-// PAGES
-import { Favs } from './pages/Favs'
-import { User } from './pages/User'
-import { NotRegisteredUser } from './pages/NotRegisteredUser'
-import { NotFound } from './pages/NotFound'
-import { Detail } from './pages/Detail'
-import { Home } from './pages/Home'
-
 import { Logo } from './components/Logo'
 import { GlobalStyle } from './styles/GlobalStyles'
 import { NavBar } from './components/NavBar'
+import { ListOfCategories } from './components/ListOfCategories'
+
+// PAGES
+const User = React.lazy(() => import('./pages/User'))
+const NotRegisteredUser = React.lazy(() => import('./pages/NotRegisteredUser'))
+const NotFound = React.lazy(() => import('./pages/NotFound'))
+const Detail = React.lazy(() => import('./pages/Detail'))
+const Home = React.lazy(() => import('./pages/Home'))
+const Favs = React.lazy(() => import('./pages/Favs'))
 
 export const App = () => {
   const { isAuth } = useContext(AuthContext)
   return (
-    <>
+    <Suspense
+      fallback={<div />}
+    >
       <GlobalStyle />
       <Logo />
+      <ListOfCategories />
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -49,6 +53,6 @@ export const App = () => {
         </Route>
       </Switch>
       <NavBar />
-    </>
+    </Suspense>
   )
 }

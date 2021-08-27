@@ -14,7 +14,8 @@ export function useGetSinglePhoto (id) {
   }
 `
 
-  const { loading, error, data } = useQuery(getSinglePhoto, { variables: { id } })
+  const { loading, error, data } = useQuery(getSinglePhoto, { variables: { id } }
+  )
 
   return { loading, error, data }
 }
