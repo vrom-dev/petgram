@@ -11,7 +11,7 @@ import { App } from './App'
 import { AuthContextProvider } from './context/AuthContext'
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3500/graphql'
+  uri: 'https://petgram-api-inky.vercel.app/graphql'
 })
 
 const authLink = setContext((_, { headers }) => {
